@@ -17,6 +17,20 @@ public class Sorts{
 
   }
 
+  public static void selectionSort(int[] data) {
+    for(int i = 0; i < data.length; i++) {
+      int minimum = i;
+      for(int j = i; j < data.length; j++) {
+        if(data[j] < data[minimum]) {
+          // System.out.println(data[j] + " at " + j + " is less than " + data[minimum] + " at " + minimum);
+          minimum = j;
+        }
+      }
+      // System.out.println("Swapping " + data[minimum] + " and " + data[i]);
+      swap(data, minimum, i);
+    }
+  }
+
   private static void swap(int[] data, int index1, int index2) {
     int temp = data[index1];
     data[index1] = data[index2];
