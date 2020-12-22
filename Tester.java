@@ -12,7 +12,7 @@ public class Tester {
 
     System.out.println(Arrays.toString(data));
 
-    Sorts.selectionSort(data);
+    Sorts.insertionSort(data);
 
     System.out.println(Arrays.toString(data));
   }

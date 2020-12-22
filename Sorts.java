@@ -31,6 +31,18 @@ public class Sorts{
     }
   }
 
+  public static void insertionSort(int[] data) {
+    for(int i = 0; i < data.length; i++) {
+      int current = data[i];
+      int j = i - 1;
+      while(j >= 0 && data[j] > current) {
+        data[j+1] = data[j];
+        j--;
+      }
+      data[j+1] = current;
+    }
+  }
+
   private static void swap(int[] data, int index1, int index2) {
     int temp = data[index1];
     data[index1] = data[index2];
